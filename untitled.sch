@@ -8458,6 +8458,8 @@ W = angled&lt;p&gt;
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0805" value="100nF"/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="TP15" library="testpad" deviceset="TP" device="B2,54"/>
 </parts>
 <sheets>
 <sheet>
@@ -8501,6 +8503,8 @@ W = angled&lt;p&gt;
 <instance part="P+3" gate="VCC" x="134.62" y="40.64" rot="R270"/>
 <instance part="C5" gate="G$1" x="134.62" y="19.05"/>
 <instance part="P+4" gate="VCC" x="142.24" y="25.4" rot="R90"/>
+<instance part="GND3" gate="1" x="129.54" y="5.08"/>
+<instance part="TP15" gate="G$1" x="243.84" y="20.32" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -8607,6 +8611,24 @@ W = angled&lt;p&gt;
 <pinref part="TP14" gate="G$1" pin="TP"/>
 <wire x1="-50.8" y1="-40.64" x2="-40.64" y2="-40.64" width="0.1524" layer="91"/>
 <junction x="-40.64" y="-40.64"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<wire x1="154.94" y1="12.7" x2="144.78" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="12.7" x2="144.78" y2="13.97" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="SWIM" gate="1" pin="3"/>
+<wire x1="124.46" y1="35.56" x2="129.54" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="35.56" x2="129.54" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="12.7" x2="134.62" y2="12.7" width="0.1524" layer="91"/>
+<junction x="144.78" y="12.7"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="134.62" y1="12.7" x2="144.78" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="13.97" x2="134.62" y2="12.7" width="0.1524" layer="91"/>
+<junction x="134.62" y="12.7"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="129.54" y1="7.62" x2="129.54" y2="12.7" width="0.1524" layer="91"/>
+<junction x="129.54" y="12.7"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -8746,23 +8768,6 @@ W = angled&lt;p&gt;
 <wire x1="144.78" y1="22.86" x2="144.78" y2="21.59" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="GND"/>
-<wire x1="154.94" y1="12.7" x2="144.78" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="12.7" x2="144.78" y2="13.97" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<pinref part="SWIM" gate="1" pin="3"/>
-<wire x1="124.46" y1="35.56" x2="129.54" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="35.56" x2="129.54" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="12.7" x2="134.62" y2="12.7" width="0.1524" layer="91"/>
-<junction x="144.78" y="12.7"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="134.62" y1="12.7" x2="144.78" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="13.97" x2="134.62" y2="12.7" width="0.1524" layer="91"/>
-<junction x="134.62" y="12.7"/>
-</segment>
-</net>
 <net name="N$26" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="!RST"/>
@@ -8790,9 +8795,9 @@ W = angled&lt;p&gt;
 <label x="45.72" y="-10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD2/AIN3/[TIM2_CH3]"/>
-<wire x1="223.52" y1="5.08" x2="231.14" y2="5.08" width="0.1524" layer="91"/>
-<label x="226.06" y="5.08" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PC5/SPI_SCK/[TIM2_CH1]"/>
+<wire x1="223.52" y1="17.78" x2="238.76" y2="17.78" width="0.1524" layer="91"/>
+<label x="233.68" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VOL-" class="0">
@@ -8802,9 +8807,9 @@ W = angled&lt;p&gt;
 <label x="45.72" y="-15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD3/AIN4/TIM2_CH2/ADC_ETR"/>
-<wire x1="223.52" y1="2.54" x2="231.14" y2="2.54" width="0.1524" layer="91"/>
-<label x="226.06" y="2.54" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PC6/SPI_MOSI/[TIM1_CH1]"/>
+<wire x1="223.52" y1="15.24" x2="238.76" y2="15.24" width="0.1524" layer="91"/>
+<label x="233.68" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NEXT" class="0">
@@ -8814,9 +8819,9 @@ W = angled&lt;p&gt;
 <label x="45.72" y="-20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD4/UART1_CK/TIM2_CH1/BEEP"/>
-<wire x1="223.52" y1="0" x2="231.14" y2="0" width="0.1524" layer="91"/>
-<label x="226.06" y="0" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PC7/SPI_MISO/[TIM1_CH2]"/>
+<wire x1="223.52" y1="12.7" x2="238.76" y2="12.7" width="0.1524" layer="91"/>
+<label x="233.68" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PRE" class="0">
@@ -8826,9 +8831,9 @@ W = angled&lt;p&gt;
 <label x="45.72" y="-25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD5/UART1_TX/AIN5"/>
-<wire x1="223.52" y1="-2.54" x2="231.14" y2="-2.54" width="0.1524" layer="91"/>
-<label x="226.06" y="-2.54" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PD2/AIN3/[TIM2_CH3]"/>
+<wire x1="223.52" y1="5.08" x2="238.76" y2="5.08" width="0.1524" layer="91"/>
+<label x="226.06" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -8844,9 +8849,9 @@ W = angled&lt;p&gt;
 <label x="45.72" y="-35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD6/UART1_RX/AIN6"/>
-<wire x1="223.52" y1="-5.08" x2="231.14" y2="-5.08" width="0.1524" layer="91"/>
-<label x="226.06" y="-5.08" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PD3/AIN4/TIM2_CH2/ADC_ETR"/>
+<wire x1="223.52" y1="2.54" x2="238.76" y2="2.54" width="0.1524" layer="91"/>
+<label x="226.06" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED2" class="0">
@@ -8885,9 +8890,19 @@ W = angled&lt;p&gt;
 <wire x1="-35.56" y1="30.48" x2="-40.64" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PC4/TIM1_CH4/CLK_CCO/AIN2/[!TIM1_CH2!]"/>
+<pinref part="TP15" gate="G$1" pin="TP"/>
+<wire x1="223.52" y1="20.32" x2="241.3" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="204,1,-35.56,-15.24,U$1,VBUS,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
