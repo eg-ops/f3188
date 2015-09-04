@@ -8504,7 +8504,7 @@ W = angled&lt;p&gt;
 <instance part="C5" gate="G$1" x="134.62" y="19.05"/>
 <instance part="P+4" gate="VCC" x="142.24" y="25.4" rot="R90"/>
 <instance part="GND3" gate="1" x="129.54" y="5.08"/>
-<instance part="TP15" gate="G$1" x="246.38" y="20.32" rot="R270"/>
+<instance part="TP15" gate="G$1" x="238.76" y="-5.08" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -8892,13 +8892,17 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="PC4/TIM1_CH4/CLK_CCO/AIN2/[!TIM1_CH2!]"/>
-<wire x1="223.52" y1="20.32" x2="238.76" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PD6/UART1_RX/AIN6"/>
+<pinref part="TP15" gate="G$1" pin="TP"/>
+<wire x1="223.52" y1="-5.08" x2="236.22" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="204,1,-35.56,-15.24,U$1,VBUS,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
