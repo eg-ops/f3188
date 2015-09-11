@@ -1505,6 +1505,29 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
+<library name="SteelCaveRobotics-Power">
+<description>&lt;h3&gt;Steel Cave Robotics Eagle Libraries - Power&lt;/h3&gt;
+&lt;a href="https://github.com/steelcaverobotics/SteelCaveRobotics-Eagle-Libraries"&gt;https://github.com/steelcaverobotics/SteelCaveRobotics-Eagle-Libraries&lt;/a&gt;</description>
+<packages>
+<package name="SOT-223">
+<description>SOT-223-3</description>
+<wire x1="-3.25" y1="1.75" x2="-3.25" y2="-1.75" width="0.127" layer="51"/>
+<wire x1="-3.25" y1="-1.75" x2="3.25" y2="-1.75" width="0.127" layer="51"/>
+<wire x1="3.25" y1="-1.75" x2="3.25" y2="1.75" width="0.127" layer="51"/>
+<wire x1="3.25" y1="1.75" x2="-3.25" y2="1.75" width="0.127" layer="51"/>
+<smd name="1" x="-2.3" y="-3.1" dx="1" dy="2.1" layer="1"/>
+<smd name="2" x="0" y="-3.1" dx="1" dy="2.1" layer="1"/>
+<smd name="3" x="2.3" y="-3.1" dx="1" dy="2.1" layer="1"/>
+<smd name="4" x="0" y="3.1" dx="3.7" dy="2.1" layer="1"/>
+<text x="-4" y="-2" size="0.6096" layer="25" rot="R90">&gt;NAME</text>
+<text x="-2" y="0" size="0.6096" layer="27">&gt;VALUE</text>
+<wire x1="-3.4" y1="1.6" x2="-3.4" y2="-1.6" width="0.203" layer="21"/>
+<wire x1="-3.4" y1="-1.6" x2="3.4" y2="-1.6" width="0.203" layer="21"/>
+<wire x1="3.4" y1="-1.6" x2="3.4" y2="1.6" width="0.203" layer="21"/>
+<wire x1="3.4" y1="1.6" x2="-3.4" y2="1.6" width="0.203" layer="21"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1764,6 +1787,7 @@ design rules under a new name.</description>
 <element name="U1" library="SparkFun-PowerIC" package="SOT223" value="" x="12.7" y="9.8425" rot="R90">
 <attribute name="PROD_ID" value="VREG-08170" x="12.7" y="9.8425" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
+<element name="U$2" library="SteelCaveRobotics-Power" package="SOT-223" value="MCP1825SOT-223-3" x="-3.81" y="4.445"/>
 </elements>
 <signals>
 <signal name="VBUS">
@@ -1820,6 +1844,8 @@ design rules under a new name.</description>
 <wire x1="25.7175" y1="8.89" x2="39.0525" y2="8.89" width="0.6096" layer="1"/>
 <wire x1="39.0525" y1="8.89" x2="40.005" y2="9.8425" width="0.6096" layer="1"/>
 <wire x1="40.005" y1="9.8425" x2="40.005" y2="11.7475" width="0.6096" layer="1"/>
+<contactref element="U$2" pad="2"/>
+<wire x1="15.7988" y1="7.5311" x2="-3.81" y2="1.345" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="R1" pad="2"/>
@@ -2159,6 +2185,12 @@ design rules under a new name.</description>
 <wire x1="18.0975" y1="9.8425" x2="19.3675" y2="8.5725" width="0.6096" layer="1"/>
 <wire x1="19.3675" y1="8.5725" x2="19.685" y2="8.5725" width="0.6096" layer="1"/>
 <wire x1="19.685" y1="8.5725" x2="20.0025" y2="8.89" width="0.6096" layer="1"/>
+</signal>
+<signal name="IN">
+<contactref element="U$2" pad="1"/>
+</signal>
+<signal name="+3V3">
+<contactref element="U$2" pad="3"/>
 </signal>
 </signals>
 </board>

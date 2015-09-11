@@ -8504,7 +8504,7 @@ W = angled&lt;p&gt;
 <instance part="C5" gate="G$1" x="134.62" y="19.05"/>
 <instance part="P+4" gate="VCC" x="142.24" y="25.4" rot="R90"/>
 <instance part="GND3" gate="1" x="129.54" y="5.08"/>
-<instance part="TP15" gate="G$1" x="238.76" y="-25.4" rot="R90"/>
+<instance part="TP15" gate="G$1" x="243.84" y="20.32" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -8888,6 +8888,13 @@ W = angled&lt;p&gt;
 <pinref part="U$1" gate="G$1" pin="LED0"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="-35.56" y1="30.48" x2="-40.64" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PC4/TIM1_CH4/CLK_CCO/AIN2/[!TIM1_CH2!]"/>
+<pinref part="TP15" gate="G$1" pin="TP"/>
+<wire x1="223.52" y1="20.32" x2="241.3" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

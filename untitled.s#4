@@ -6043,6 +6043,14 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
+<symbol name="VDD">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.905" x2="0" y2="1.27" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VDD" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="VCC" prefix="P+">
@@ -6062,6 +6070,19 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VDD" prefix="VDD">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VDD" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -8605,7 +8626,6 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <part name="IC1" library="stm8" deviceset="STM8S003" device="F3"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="1u"/>
 <part name="SWIM" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0805" value="100nF"/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
@@ -8617,6 +8637,8 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <part name="U1" library="SparkFun-PowerIC" deviceset="V_REG_LM1117" device="SOT223"/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="VDD1" library="supply1" deviceset="VDD" device=""/>
+<part name="VDD2" library="supply1" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8652,7 +8674,6 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <instance part="IC1" gate="G$1" x="187.96" y="15.24"/>
 <instance part="C1" gate="G$1" x="144.78" y="19.05"/>
 <instance part="SWIM" gate="1" x="116.84" y="35.56" rot="MR180"/>
-<instance part="P+3" gate="VCC" x="134.62" y="40.64" rot="R270"/>
 <instance part="C5" gate="G$1" x="134.62" y="19.05"/>
 <instance part="P+4" gate="VCC" x="142.24" y="25.4" rot="R90"/>
 <instance part="GND3" gate="1" x="129.54" y="5.08"/>
@@ -8664,6 +8685,8 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <instance part="U1" gate="G$1" x="-127" y="-2.54"/>
 <instance part="P+5" gate="VCC" x="-144.78" y="-2.54" rot="R90"/>
 <instance part="GND4" gate="1" x="-127" y="-17.78"/>
+<instance part="VDD1" gate="G$1" x="-116.84" y="5.08"/>
+<instance part="VDD2" gate="G$1" x="137.16" y="40.64" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -8713,11 +8736,6 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="-35.56" y1="-30.48" x2="-40.64" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="-30.48" x2="-40.64" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="-40.64" y="-25.4"/>
-</segment>
-<segment>
-<pinref part="P+3" gate="VCC" pin="VCC"/>
-<pinref part="SWIM" gate="1" pin="1"/>
-<wire x1="132.08" y1="40.64" x2="124.46" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VDD"/>
@@ -9075,7 +9093,7 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="223.52" y1="-5.08" x2="236.22" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="VDD" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="OUT"/>
 <pinref part="TP13" gate="G$1" pin="TP"/>
@@ -9085,6 +9103,13 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="-119.38" y1="-5.08" x2="-116.84" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-116.84" y1="-5.08" x2="-116.84" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="-116.84" y="-2.54"/>
+<pinref part="VDD1" gate="G$1" pin="VDD"/>
+<wire x1="-116.84" y1="2.54" x2="-116.84" y2="-2.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SWIM" gate="1" pin="1"/>
+<wire x1="134.62" y1="40.64" x2="124.46" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="VDD2" gate="G$1" pin="VDD"/>
 </segment>
 </net>
 </nets>
