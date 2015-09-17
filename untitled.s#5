@@ -6043,6 +6043,14 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
+<symbol name="VDD">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.905" x2="0" y2="1.27" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VDD" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="VCC" prefix="P+">
@@ -6062,6 +6070,19 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VDD" prefix="VDD">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VDD" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -8566,6 +8587,64 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 </deviceset>
 </devicesets>
 </library>
+<library name="SteelCaveRobotics-Power">
+<description>&lt;h3&gt;Steel Cave Robotics Eagle Libraries - Power&lt;/h3&gt;
+&lt;a href="https://github.com/steelcaverobotics/SteelCaveRobotics-Eagle-Libraries"&gt;https://github.com/steelcaverobotics/SteelCaveRobotics-Eagle-Libraries&lt;/a&gt;</description>
+<packages>
+<package name="SOT-223">
+<description>SOT-223-3</description>
+<wire x1="-3.25" y1="1.75" x2="-3.25" y2="-1.75" width="0.127" layer="51"/>
+<wire x1="-3.25" y1="-1.75" x2="3.25" y2="-1.75" width="0.127" layer="51"/>
+<wire x1="3.25" y1="-1.75" x2="3.25" y2="1.75" width="0.127" layer="51"/>
+<wire x1="3.25" y1="1.75" x2="-3.25" y2="1.75" width="0.127" layer="51"/>
+<smd name="1" x="-2.3" y="-3.1" dx="1" dy="2.1" layer="1"/>
+<smd name="2" x="0" y="-3.1" dx="1" dy="2.1" layer="1"/>
+<smd name="3" x="2.3" y="-3.1" dx="1" dy="2.1" layer="1"/>
+<smd name="4" x="0" y="3.1" dx="3.7" dy="2.1" layer="1"/>
+<text x="-4" y="-2" size="0.6096" layer="25" rot="R90">&gt;NAME</text>
+<text x="-2" y="0" size="0.6096" layer="27">&gt;VALUE</text>
+<wire x1="-3.4" y1="1.6" x2="-3.4" y2="-1.6" width="0.203" layer="21"/>
+<wire x1="-3.4" y1="-1.6" x2="3.4" y2="-1.6" width="0.203" layer="21"/>
+<wire x1="3.4" y1="-1.6" x2="3.4" y2="1.6" width="0.203" layer="21"/>
+<wire x1="3.4" y1="1.6" x2="-3.4" y2="1.6" width="0.203" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MCP1825">
+<description>MCP1825 3.3v LDO Linear Regulator</description>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<pin name="IN" x="-10.16" y="2.54" visible="pin" length="short" direction="pwr"/>
+<pin name="GND@2" x="0" y="-7.62" visible="off" length="short" direction="pwr" rot="R90"/>
+<pin name="+3V3" x="10.16" y="2.54" visible="pin" length="short" direction="pwr" rot="R180"/>
+<text x="-7.62" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.54" y="-3.81" size="1.778" layer="97">GND</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MCP1825">
+<description>MCP1825 3.3v LDO Linear Regulator</description>
+<gates>
+<gate name="G$1" symbol="MCP1825" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="SOT-223-3" package="SOT-223">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="3"/>
+<connect gate="G$1" pin="GND@2" pad="2"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8617,6 +8696,8 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <part name="U1" library="SparkFun-PowerIC" deviceset="V_REG_LM1117" device="SOT223"/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="VDD1" library="supply1" deviceset="VDD" device=""/>
+<part name="U$2" library="SteelCaveRobotics-Power" deviceset="MCP1825" device="SOT-223-3"/>
 </parts>
 <sheets>
 <sheet>
@@ -8664,6 +8745,8 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <instance part="U1" gate="G$1" x="-127" y="-2.54"/>
 <instance part="P+5" gate="VCC" x="-144.78" y="-2.54" rot="R90"/>
 <instance part="GND4" gate="1" x="-127" y="-17.78"/>
+<instance part="VDD1" gate="G$1" x="-116.84" y="5.08"/>
+<instance part="U$2" gate="G$1" x="-109.22" y="-35.56"/>
 </instances>
 <busses>
 </busses>
@@ -9075,7 +9158,7 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="223.52" y1="-5.08" x2="236.22" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="VDD" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="OUT"/>
 <pinref part="TP13" gate="G$1" pin="TP"/>
@@ -9085,6 +9168,8 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="-119.38" y1="-5.08" x2="-116.84" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-116.84" y1="-5.08" x2="-116.84" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="-116.84" y="-2.54"/>
+<pinref part="VDD1" gate="G$1" pin="VDD"/>
+<wire x1="-116.84" y1="2.54" x2="-116.84" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
