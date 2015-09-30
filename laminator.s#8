@@ -13782,6 +13782,7 @@ data EEPROM, 10-bit ADC, 3 timers, UART, SPI, I2C</description>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13816,6 +13817,7 @@ data EEPROM, 10-bit ADC, 3 timers, UART, SPI, I2C</description>
 <instance part="GND2" gate="1" x="149.86" y="27.94"/>
 <instance part="+3V2" gate="G$1" x="-27.94" y="22.86"/>
 <instance part="+3V3" gate="G$1" x="-147.32" y="60.96"/>
+<instance part="GND3" gate="1" x="-175.26" y="17.78"/>
 </instances>
 <busses>
 </busses>
@@ -14025,6 +14027,12 @@ data EEPROM, 10-bit ADC, 3 timers, UART, SPI, I2C</description>
 <pinref part="U$1" gate="G$1" pin="GND@2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="149.86" y1="35.56" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="-139.7" y1="25.4" x2="-175.26" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-175.26" y1="25.4" x2="-175.26" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

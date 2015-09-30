@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -13869,7 +13869,7 @@ W = angled&lt;p&gt;
 <instance part="OK1" gate="-1" x="-99.06" y="-27.94" rot="R180"/>
 <instance part="T1" gate="G$1" x="-127" y="-25.4" rot="R180"/>
 <instance part="R4" gate="G$1" x="-78.74" y="-33.02" rot="R180"/>
-<instance part="V220" gate="G$1" x="114.3" y="10.16" rot="R180"/>
+<instance part="V220" gate="G$1" x="-190.5" y="5.08" rot="R180"/>
 <instance part="TEN" gate="G$1" x="-165.1" y="-15.24"/>
 <instance part="R3" gate="G$1" x="-116.84" y="-33.02" rot="R180"/>
 <instance part="C2" gate="G$1" x="-134.62" y="-12.7" rot="R180"/>
@@ -13925,8 +13925,8 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="V220" gate="G$1" pin="1"/>
-<wire x1="106.68" y1="10.16" x2="101.6" y2="10.16" width="0.1524" layer="91"/>
-<label x="101.6" y="10.16" size="1.778" layer="95"/>
+<wire x1="-198.12" y1="5.08" x2="-203.2" y2="5.08" width="0.1524" layer="91"/>
+<label x="-203.2" y="5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
@@ -14026,8 +14026,8 @@ W = angled&lt;p&gt;
 <net name="N" class="0">
 <segment>
 <pinref part="V220" gate="G$1" pin="2"/>
-<wire x1="106.68" y1="7.62" x2="101.6" y2="7.62" width="0.1524" layer="91"/>
-<label x="101.6" y="7.62" size="1.778" layer="95"/>
+<wire x1="-198.12" y1="2.54" x2="-203.2" y2="2.54" width="0.1524" layer="91"/>
+<label x="-203.2" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-152.4" y1="-25.4" x2="-152.4" y2="-15.24" width="0.1524" layer="91"/>

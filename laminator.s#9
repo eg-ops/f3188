@@ -13781,6 +13781,7 @@ data EEPROM, 10-bit ADC, 3 timers, UART, SPI, I2C</description>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13814,6 +13815,7 @@ data EEPROM, 10-bit ADC, 3 timers, UART, SPI, I2C</description>
 <instance part="+3V1" gate="G$1" x="167.64" y="55.88"/>
 <instance part="GND2" gate="1" x="149.86" y="27.94"/>
 <instance part="+3V2" gate="G$1" x="-27.94" y="22.86"/>
+<instance part="+3V3" gate="G$1" x="-147.32" y="60.96"/>
 </instances>
 <busses>
 </busses>
