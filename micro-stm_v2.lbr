@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -10968,6 +10968,57 @@
 <pin name="PB7" x="22.86" y="25.4" length="middle" rot="R180"/>
 <pin name="PA11" x="22.86" y="-5.08" length="middle" rot="R180"/>
 <pin name="PA12" x="22.86" y="-2.54" length="middle" rot="R180"/>
+</symbol>
+<symbol name="STM32_48PIN_TYP12">
+<pin name="PA0" x="25.4" y="-38.1" length="middle" rot="R180"/>
+<pin name="PA1" x="25.4" y="-35.56" length="middle" rot="R180"/>
+<pin name="PA2" x="25.4" y="-33.02" length="middle" rot="R180"/>
+<pin name="PA3" x="25.4" y="-30.48" length="middle" rot="R180"/>
+<pin name="PA4" x="25.4" y="-27.94" length="middle" rot="R180"/>
+<pin name="PA5" x="25.4" y="-25.4" length="middle" rot="R180"/>
+<pin name="PA6" x="25.4" y="-22.86" length="middle" rot="R180"/>
+<pin name="PA7" x="25.4" y="-20.32" length="middle" rot="R180"/>
+<pin name="PA9" x="25.4" y="-15.24" length="middle" rot="R180"/>
+<pin name="PA10" x="25.4" y="-12.7" length="middle" rot="R180"/>
+<pin name="PA13" x="25.4" y="-5.08" length="middle" rot="R180"/>
+<pin name="PA14" x="25.4" y="-2.54" length="middle" rot="R180"/>
+<pin name="PB0" x="25.4" y="5.08" length="middle" rot="R180"/>
+<pin name="VDDA" x="-20.32" y="30.48" length="middle" direction="pwr"/>
+<pin name="BOOT0" x="-20.32" y="-20.32" length="middle" direction="in"/>
+<pin name="NRST" x="-20.32" y="5.08" length="middle" function="dot"/>
+<pin name="OSC_IN" x="-20.32" y="-7.62" length="middle" function="clk"/>
+<pin name="OSC_OUT" x="-20.32" y="-12.7" length="middle" function="clk"/>
+<wire x1="-15.24" y1="-40.64" x2="-15.24" y2="45.72" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="45.72" x2="20.32" y2="45.72" width="0.254" layer="94"/>
+<wire x1="20.32" y1="45.72" x2="20.32" y2="-40.64" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-40.64" x2="-15.24" y2="-40.64" width="0.254" layer="94"/>
+<text x="-2.54" y="48.26" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-43.18" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="PA8" x="25.4" y="-17.78" length="middle" rot="R180"/>
+<pin name="PA15" x="25.4" y="0" length="middle" rot="R180"/>
+<pin name="PB1" x="25.4" y="7.62" length="middle" rot="R180"/>
+<pin name="PB2" x="25.4" y="10.16" length="middle" rot="R180"/>
+<pin name="PB3" x="25.4" y="12.7" length="middle" rot="R180"/>
+<pin name="PB4" x="25.4" y="15.24" length="middle" rot="R180"/>
+<pin name="PB5" x="25.4" y="17.78" length="middle" rot="R180"/>
+<pin name="PB6" x="25.4" y="20.32" length="middle" rot="R180"/>
+<pin name="PB7" x="25.4" y="22.86" length="middle" rot="R180"/>
+<pin name="PA11" x="25.4" y="-10.16" length="middle" rot="R180"/>
+<pin name="PA12" x="25.4" y="-7.62" length="middle" rot="R180"/>
+<pin name="PB8" x="25.4" y="25.4" length="middle" rot="R180"/>
+<pin name="PB9" x="25.4" y="27.94" length="middle" rot="R180"/>
+<pin name="PB10" x="25.4" y="30.48" length="middle" rot="R180"/>
+<pin name="PB11" x="25.4" y="33.02" length="middle" rot="R180"/>
+<pin name="PB12" x="25.4" y="35.56" length="middle" rot="R180"/>
+<pin name="PB13" x="25.4" y="38.1" length="middle" rot="R180"/>
+<pin name="PB14" x="25.4" y="40.64" length="middle" rot="R180"/>
+<pin name="PB15" x="25.4" y="43.18" length="middle" rot="R180"/>
+<pin name="VBAT" x="-20.32" y="17.78" length="middle" direction="pwr"/>
+<pin name="VDDIO" x="-20.32" y="22.86" length="middle" direction="pwr"/>
+<pin name="VSSA" x="-20.32" y="-38.1" length="middle" direction="pas"/>
+<pin name="PC13" x="-20.32" y="-27.94" length="middle"/>
+<pin name="PC14" x="-20.32" y="-30.48" length="middle"/>
+<pin name="PC15" x="-20.32" y="-33.02" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -30239,6 +30290,74 @@
 </connects>
 <technologies>
 <technology name="8"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STM32F042C*T" prefix="IC">
+<description>ARM®-based 32-bit MCU, up to 32 KB Flash, crystal-less USB
+FS 2.0, CAN, 9 timers, ADC &amp; comm. interfaces, 2.0 - 3.6 V</description>
+<gates>
+<gate name="1" symbol="STM32_48PIN_TYP12" x="0" y="0"/>
+<gate name="2" symbol="PWR_VDD2_VSS3" x="60.96" y="0"/>
+</gates>
+<devices>
+<device name="" package="LQFP48">
+<connects>
+<connect gate="1" pin="BOOT0" pad="44"/>
+<connect gate="1" pin="NRST" pad="7"/>
+<connect gate="1" pin="OSC_IN" pad="5"/>
+<connect gate="1" pin="OSC_OUT" pad="6"/>
+<connect gate="1" pin="PA0" pad="10"/>
+<connect gate="1" pin="PA1" pad="11"/>
+<connect gate="1" pin="PA10" pad="31"/>
+<connect gate="1" pin="PA11" pad="32"/>
+<connect gate="1" pin="PA12" pad="33"/>
+<connect gate="1" pin="PA13" pad="34"/>
+<connect gate="1" pin="PA14" pad="37"/>
+<connect gate="1" pin="PA15" pad="38"/>
+<connect gate="1" pin="PA2" pad="12"/>
+<connect gate="1" pin="PA3" pad="13"/>
+<connect gate="1" pin="PA4" pad="14"/>
+<connect gate="1" pin="PA5" pad="15"/>
+<connect gate="1" pin="PA6" pad="16"/>
+<connect gate="1" pin="PA7" pad="17"/>
+<connect gate="1" pin="PA8" pad="29"/>
+<connect gate="1" pin="PA9" pad="30"/>
+<connect gate="1" pin="PB0" pad="18"/>
+<connect gate="1" pin="PB1" pad="19"/>
+<connect gate="1" pin="PB10" pad="21"/>
+<connect gate="1" pin="PB11" pad="22"/>
+<connect gate="1" pin="PB12" pad="25"/>
+<connect gate="1" pin="PB13" pad="26"/>
+<connect gate="1" pin="PB14" pad="27"/>
+<connect gate="1" pin="PB15" pad="28"/>
+<connect gate="1" pin="PB2" pad="20"/>
+<connect gate="1" pin="PB3" pad="39"/>
+<connect gate="1" pin="PB4" pad="40"/>
+<connect gate="1" pin="PB5" pad="41"/>
+<connect gate="1" pin="PB6" pad="42"/>
+<connect gate="1" pin="PB7" pad="43"/>
+<connect gate="1" pin="PB8" pad="45"/>
+<connect gate="1" pin="PB9" pad="46"/>
+<connect gate="1" pin="PC13" pad="2"/>
+<connect gate="1" pin="PC14" pad="3"/>
+<connect gate="1" pin="PC15" pad="4"/>
+<connect gate="1" pin="VBAT" pad="1"/>
+<connect gate="1" pin="VDDA" pad="9"/>
+<connect gate="1" pin="VDDIO" pad="36"/>
+<connect gate="1" pin="VSSA" pad="8"/>
+<connect gate="2" pin="VDD@1" pad="48"/>
+<connect gate="2" pin="VDD@2" pad="24"/>
+<connect gate="2" pin="VSS@1" pad="35"/>
+<connect gate="2" pin="VSS@2" pad="23"/>
+<connect gate="2" pin="VSS@3" pad="47"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="OC_DIGIKEY" value="497-14648-ND" constant="no"/>
+<attribute name="OC_MOUSER" value="511-STM32F042C6T6" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
